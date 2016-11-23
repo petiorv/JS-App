@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="text">
+    <h1>Wellcome</h1>
+    GitHub username: <input type="text" id="txtUsername">
+    <button onclick="Load()">Load Title</button>
+    <ul id="result">
+
+    </ul>
+</div>
+<script>
+    function Load() {
+        let username = $('#txtUsername').val();
+        $.get(`https://api.github.com/users/${username}/repos`)
+                .then(function (repositories) {
+                    console.log(repositories);
+                })
+                .catch(function (err) {
+                    let errorDiv = $('<div>')
+                            .css('background', 'red')
+                            .css('color', 'white')
+                            .css('font-weight', 'bold')
+                            .css('font-size', '20')
+                            .fadeOut(5000)
+                            .text('BASI KURECA');
+                    $('body').prepend(errorDiv)
+                });
+
+    }
+</script>
+</body>
+</html>

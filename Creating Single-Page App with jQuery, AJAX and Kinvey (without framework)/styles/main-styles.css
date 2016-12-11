@@ -1,0 +1,110 @@
+#menu {
+  background: #DDD;
+  text-align: center;
+  padding: 5px;
+  line-height: 1.5;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+#menu>#loggedInUser {
+  float: right;
+  margin-right: 10px;
+}
+
+
+#menu a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#menu a:hover {
+  background: #BBB;
+}
+
+main > section {
+  display: none;
+  padding: 20px 5px;
+}
+
+section h1 {
+  margin: 10px 0px;
+  font-size: 1.2em;
+}
+
+table {
+  align-self: center;
+  vertical-align: center;
+  align-items: center;
+  width: 100%;
+  max-height: 100%;
+}
+
+table th {
+  background: #DDD;
+  padding: 10px;
+}
+
+table td {
+  padding: 5px 10px;
+  background: #EEE;
+}
+
+#infoBox, #errorBox, #loadingBox {
+  width: 100%;
+  margin: 5px auto;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  display: none;
+}
+
+#loadingBox {
+  background: #7CB3E9;
+}
+#infoBox {
+  background: #393;
+}
+#errorBox {
+  background: #F50;
+}
+
+/*footer {
+  background: #DDD;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  text-align: center;
+  border-radius: 3px;
+}*/
+
+
+/* LOADER STYLES */
+#loader {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* TEST Fixing footer*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0; /* bottom = footer height */
+}
+
+footer {
+    background-color: #DDD;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    vertical-align: center;
+    align-items: center;
+}
